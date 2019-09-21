@@ -8,7 +8,7 @@ const Sidebar = ({data, index, changeParagraph}) => {
             <div key={i}
                 className={`SidebarList-item ${i === index ? 'SidebarList-item--Highlighted' : ''}`}
                 onClick={() => changeParagraph(i)}>
-                <h3>Paragraph {i + 1}</h3>
+                <h3>Paragraph {i + 1} {data[i].label && <span className="SidebarItem-checked">&#10003;</span>}</h3>
                 {data[i].text}
             </div>
         )

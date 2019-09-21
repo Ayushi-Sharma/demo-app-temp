@@ -25,3 +25,7 @@
 .SidebarList-item--Highlighted:hover {
     color: white;
 }
+
+.SidebarItem-checked {
+    color: green;
+}
