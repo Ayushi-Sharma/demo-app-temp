@@ -23,24 +23,14 @@ function App() {
     let paragraph = `${newData[selectedParagraphIndex].prev_text} ${newData[selectedParagraphIndex].text} ${newData[selectedParagraphIndex].next_text}`,
         splitText = newData[selectedParagraphIndex].text.split(" "),
         stringArray = paragraph.split(" ");
-    let outputData = [];
     const handleSaveData = () => {
-        outputData = [];
         for(let i=0; i<newData.length; i++) {
-            outputData.push(
-                <tr>
-                    <td>newData[i].Id</td>
-                    <td>newData[i].prev_text</td>
-                    <td>newData[i].text</td>
-                    <td>newData[i].next_text</td>
-                    <td>newData[i].label</td>
-                </tr>
-            )
             if(!newData[i].label) {
                 return alert("Please Select Labels for all Paragraphs.")
             }   else if(i === newData.length - 1) {
                 handleIsDataSaved(true)
-                // alert("Data Saved Successfully")
+                console.log(newData)
+                alert("Check console for the JSON data")
             }
         }
     }
@@ -65,7 +55,7 @@ function App() {
                     changeParagraph={index => handleSelectedParagraphIndex(index)}/>
             </div>
             <footer className={`App-Footer ${isDataSaved ? 'NoDisplay' : ''}`}><button className="App-Footer--button" onClick={handleSaveData}>Save Data</button></footer>
-            <table className={`Output ${isDataSaved ? 'showData' : ''}`}>
+            {/* <table className={`Output ${isDataSaved ? 'showData' : ''}`}>
                 <thead>
                     <tr>
                         <td>Id</td>
@@ -78,7 +68,7 @@ function App() {
                 <tbody>
                     {outputData}
                 </tbody>
-            </table>
+            </table> */}
         </div>
     );
 }
