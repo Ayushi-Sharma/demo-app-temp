@@ -2,21 +2,46 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
+.App-Header {
+    height: 40px;
+    background-color: #e5f2fe;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    justify-content: flex-end;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.App-Main {
+    display: flex;
+    max-height: calc(100vh - 120px);
 }
 
-.App-link {
-  color: #09d3ac;
+.App-Footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 10px 20px;
+    background-color: black;
 }
+
+.App-Footer--button {
+    height: 38px;
+    border: 0;
+    padding: 5px 20px;
+    background: white;
+    color: green;
+}
+
+.Output {
+    display: none;
+    height: 100vh;
+}
+
+.NoDisplay {
+    display: none;
+}
+
+.showData {
+    display: flex;
+}
+
